@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1542132003920.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "505243696",
+    "id" : "313305CE",
+    "lastKnownWriteTime" : 1542086958,
+    "last_content_update" : 1542086958,
+    "path" : "~/GitHub/texreghelpr/man/extract_glm_exp.Rd",
+    "project_path" : "man/extract_glm_exp.Rd",
+    "properties" : {
+        "cursorPosition" : "90,30",
+        "scrollLine" : "72"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_doc"
+}

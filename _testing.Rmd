@@ -14,3 +14,8 @@ library(devtools)
 install_github("SarBearSchwartz/texreghelpr")
 ```
 
+
+```{r}
+library(texreghelpr)
+```
+
