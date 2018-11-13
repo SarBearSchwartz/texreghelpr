@@ -1,0 +1,5 @@
+"0","install_github(""sarbearschwartz/texreghelpr"")
+"
+"2","Error in install_github(""sarbearschwartz/texreghelpr"") : 
+  could not find function ""install_github""
+"
