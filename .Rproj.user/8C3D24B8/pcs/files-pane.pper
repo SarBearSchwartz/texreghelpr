@@ -1,9 +1,9 @@
 {
-    "path" : "~/GitHub/texreghelpr/man",
-    "sortOrder" : [
+    "path": "~/GitHub/texreghelpr/R",
+    "sortOrder": [
         {
-            "ascending" : true,
-            "columnIndex" : 2
+            "columnIndex": 2,
+            "ascending": true
         }
     ]
 }

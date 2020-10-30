@@ -2,6 +2,7 @@ extract_glmer_exp <- function (model,
                                method = c("naive", "profile", "boot", "Wald"),
                                level = 0.95,
                                nsim = 1000,
+                               include.any = FALSE,
                                include.aic = TRUE,
                                include.bic = TRUE,
                                include.dic = FALSE,
@@ -17,6 +18,26 @@ extract_glmer_exp <- function (model,
   gof <- numeric()
   gof.names <- character()
   gof.decimal <- logical()
+  if(include.any == FALSE){
+    include.aic = FALSE
+    include.bic = FALSE
+    include.dic = FALSE
+    include.loglik = FALSE
+    include.deviance = FALSE
+    include.nobs = FALSE
+    include.groups = FALSE
+    include.variance = FALSE
+  }
+  if(include.any == TRUE){
+    include.aic = TRUE
+    include.bic = TRUE
+    include.dic = TRUE
+    include.loglik = TRUE
+    include.deviance = TRUE
+    include.nobs = TRUE
+    include.groups = TRUE
+    include.variance = TRUE
+  }
   if (include.aic == TRUE) {
     aic <- AIC(model)
     gof <- c(gof, aic)

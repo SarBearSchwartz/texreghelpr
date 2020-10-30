@@ -1,13 +1,21 @@
 extract_gee_exp <- function (model,
                              robust = TRUE,
+                             include.any = FALSE,
                              include.dispersion = TRUE,
-                             include.nobs = TRUE,
+                             include.nobs = FALSE,
                              ...){
   s <- summary(model, ...)
   names <- rownames(coef(s))
   co <- coef(s)[, 1]
   co_exp <- exp(co)
 
+  if(include.any == FALSE){
+    include.aic = FALSE
+    include.bic = FALSE
+    include.loglik = FALSE
+    include.deviance = FALSE
+    include.nobs = FALSE
+  }
   if (robust == TRUE) {
     se <- coef(s)[, 4]
     zval <- coef(s)[, 5]

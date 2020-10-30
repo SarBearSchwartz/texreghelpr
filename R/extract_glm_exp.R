@@ -1,9 +1,10 @@
 extract_glm_exp <- function (model,
-                             include.aic = TRUE,
-                             include.bic = TRUE,
-                             include.loglik = TRUE,
-                             include.deviance = TRUE,
-                             include.nobs = TRUE,
+                             include.any = FALSE,
+                             include.aic = FALSE,
+                             include.bic = FALSE,
+                             include.loglik = FALSE,
+                             include.deviance = FALSE,
+                             include.nobs = FALSE,
                              ...) {
   s <- summary(model, ...)
   coefficient.names <- rownames(s$coef)
@@ -25,6 +26,14 @@ extract_glm_exp <- function (model,
   gof.names <- character()
   gof.decimal <- logical()
 
+
+  if(include.any == FALSE){
+    include.aic = FALSE
+    include.bic = FALSE
+    include.loglik = FALSE
+    include.deviance = FALSE
+    include.nobs = FALSE
+  }
   if (include.aic == TRUE) {
     gof <- c(gof, aic)
     gof.names <- c(gof.names, "AIC")
